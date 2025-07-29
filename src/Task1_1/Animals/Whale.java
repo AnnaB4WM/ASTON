@@ -1,8 +1,9 @@
 package Task1_1.Animals;
 
 import Task1_1.AbstractClass.AMammal;
+import Task1_1.Interface.ILivesInWater;
 
-public class Whale extends AMammal {
+public class Whale extends AMammal implements ILivesInWater {
 
     public Whale() {
     }
@@ -12,7 +13,7 @@ public class Whale extends AMammal {
     }
 
     @Override
-    public void habitat() {
+    public void livesInWater() {
         System.out.println("Кит " + getName() + " живет в воде");
     }
 }
