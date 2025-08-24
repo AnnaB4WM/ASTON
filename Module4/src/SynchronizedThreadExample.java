@@ -12,8 +12,7 @@ public class SynchronizedThreadExample {
                         try {
                             lock.wait();
                         } catch (InterruptedException e) {
-                            Thread.currentThread().interrupt();
-                            return;
+                            throw new RuntimeException(e);
                         }
                     }
                     System.out.println("1");
@@ -30,8 +29,7 @@ public class SynchronizedThreadExample {
                         try {
                             lock.wait();
                         } catch (InterruptedException e) {
-                            Thread.currentThread().interrupt();
-                            return;
+                            throw new RuntimeException(e);
                         }
                     }
                 }
